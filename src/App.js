@@ -3,8 +3,13 @@ import './App.css';
 import Product from './product';
 import Post from './post';
 import Books from './Books';
+import HttpExample from './HttpExample';
+import { useState } from 'react';
 
 function App() {
+
+  const [some,setSome]=useState(true)
+  
 
   const products =[
     { name:"iphone", price:"75000", qty:"2"},
@@ -26,6 +31,8 @@ function App() {
       {/* </header> */}
       {/* <Post/> */}
       <Books></Books>
+      {/* <button onClick={()=>setSome(!some)}>Toggle</button>
+      <HttpExample test={some}></HttpExample> */}
     </div>
   );
 }

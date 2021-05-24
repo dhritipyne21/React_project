@@ -1,0 +1,20 @@
+.common{
+    border:3px dashed black;
+    padding : 20px;
+}
+
+.light{
+    background-color: aqua;
+}
+
+.highlight{
+    background-color: teal;
+}
+
+.light_theme{
+    background-color: wheat;
+}
+
+.dark_theme{
+    background-color: rgb(221, 167, 19);
+}

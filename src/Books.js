@@ -45,7 +45,7 @@ const Books = ()=>{
         // const booksCopy = [...books];
         // const filtered = booksCopy.filter((book)=>book.id !== id)
         // setBooks(filtered);
-        axios.delete('http://localhost:5000/books/'+id).then((res)=>{
+        axios.delete(`http://localhost:5000/books/${id}`).then((res)=>{
             setRefresh(!refresh)
         })
     }

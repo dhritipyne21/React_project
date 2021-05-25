@@ -10,6 +10,7 @@ import SampleClassComponent from './SampleClassComponent';
 import SampleFunctionComponent from './SampleFunctionComponent';
 import ErrorBoundary from './ErrorBoundary';
 import {Link,Route,BrowserRouter,Switch, useHistory} from 'react-router-dom';
+import Samples  from './services/sample';
 
 //export const CurrUserContext = React.createContext({name:'John'})
 export const CurrUserContext = React.createContext({theme:'light_theme'})
@@ -31,14 +32,14 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      
+      {/* <Samples></Samples>
     <p>
       <h2>Choose Theme:   </h2>
         <select name="theme" id="theme" onChange={(e)=>setTheme(e.target.value)}>
             <option value="light_theme">Light Theme</option>
             <option value="dark_theme">Dark Theme</option>
         </select>
-    </p>
+    </p> */}
   
       {/* <ul>
         <li><Link to='/'>Home</Link></li>
@@ -74,7 +75,7 @@ function App() {
       
       {/* </header> */}
       {/* <Post/> */}
-      {/* <Books></Books> */}
+      <Books></Books>
       {/* <CurrUserContext.Provider value={{name}}>
         <ErrorBoundary>
         <SampleClassComponent msg='Hi Class'></SampleClassComponent>
@@ -82,10 +83,10 @@ function App() {
         <SampleFunctionComponent msg='Hi Function'></SampleFunctionComponent>
         </ErrorBoundary>
       </CurrUserContext.Provider> */}
-      <CurrUserContext.Provider value={{theme}}>
+      {/* <CurrUserContext.Provider value={{theme}}>
       <Products></Products>
-      </CurrUserContext.Provider>
-     
+      </CurrUserContext.Provider> */}
+
       {/* <Users></Users> */}
       {/* <button onClick={()=>setSome(!some)}>Toggle</button>
       <HttpExample test={some}></HttpExample> */}

@@ -7,10 +7,10 @@ export  class Books extends Component{
     
     state = {
         books:[],
-        title:'',
-        category:'',
-        publish_date:'',
-        cost:'',
+        // title:'',
+        // category:'',
+        // publish_date:'',
+        // cost:'',
         refresh:true,
         filter_category:'',
         highlight:false
@@ -80,9 +80,13 @@ export  class Books extends Component{
         // })
         // console.log(edited);
         // this.setState({books:edited});
-        axios.put('http://localhost:5000/books/'+id, {title,category,publish_date,cost}).then((res)=>{
-            this.setState({refresh:!this.state.refresh})
-        })
+        console.log('Edit')
+        
+            axios.put('http://localhost:5000/books/'+id, {title,category,publish_date,cost}).then((res)=>{
+                this.setState({refresh:!this.state.refresh})
+            })
+        
+        
         }
     render(){
         return(
@@ -104,7 +108,7 @@ export  class Books extends Component{
                     <option>Fiction</option>
                     </select></p> */}
                 <h2>Publish Date: </h2>
-                <input type="text" value={this.state.publish_date} onChange={(e)=>{this.setState({publish_date:e.target.value})}}></input>
+                <input type="date" value={this.state.publish_date} onChange={(e)=>{this.setState({publish_date:e.target.value})}}></input>
                 <h2>Cost: </h2>
                 <input type="text" value={this.state.cost} onChange={(e)=>{this.setState({cost:e.target.value})}}></input>
                 <br></br> <br></br>
